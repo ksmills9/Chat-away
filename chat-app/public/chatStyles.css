@@ -1,0 +1,219 @@
+body { 
+    margin: 0; 
+    padding-bottom: 3rem; 
+    height: 100vh;
+    background-color: #102A43;
+    color: #f0f4f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+}
+
+#form { 
+    background: rgba(0, 0, 0, 0.15); 
+    padding: 0.25rem; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    display: flex; 
+    height: 3rem; 
+    box-sizing: border-box; 
+    backdrop-filter: blur(10px); 
+}
+
+#input { 
+    border: none; 
+    padding: 0 1rem; 
+    flex-grow: 1; 
+    border-radius: 2rem; 
+    margin: 0.25rem; 
+}
+
+#input:focus { 
+    outline: none; 
+}
+#form > button { 
+    background: #333; 
+    border: none; 
+    padding: 0 1rem; 
+    margin: 0.25rem; 
+    border-radius: 3px; 
+    outline: none; 
+    color: #fff; 
+}
+
+#messages { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    flex-grow: 1;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+#messages > li { 
+    padding: 0.5rem 1rem; 
+    flex-wrap: wrap;
+}
+
+
+
+/* Modal (Adapted from from https://www.w3schools.com/howto/howto_css_modals.asp) */
+.c-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.c-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@media screen and (min-width: 800px){
+    .c-modal-content{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 800px){
+    .c-modal-content{
+        width: 90%;
+    }
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.c-modal-header {
+    padding: 2px 16px;
+    background-color: #243b53;
+    color: white;
+}
+
+.c-modal-header > h2 {
+    font-size: 20px;
+    padding: 2%;
+
+}
+
+.c-modal-body {
+    padding: 16px;
+    background-color: #486581;
+}
+
+/* container styles */
+
+.main-container {
+    height: 100%;
+    display: flex;
+}
+
+.message-container {
+    width: 66%;
+}
+
+.users-container {
+    width: 34%;
+    overflow-y: scroll;
+}
+
+.message-list-container {
+    overflow-y: scroll;
+    height: 92%;
+    max-height: 97rem;
+    display: flex;
+    margin: 2vh;
+    border-radius: 5px;
+    background-color: #334e68;
+}
+
+.loginErrorMsg { 
+    color: red;
+}
+
+#users { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    flex-grow: 1;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+#users > li {
+    font-size: 20px;
+    padding: 0.5rem 1rem; 
+}
+
+.user-list-container {
+    overflow-y: scroll;
+    height: 92%;
+    display: flex;
+    max-height: 97rem;
+    margin: 2vh;
+    border-radius: 5px;
+    background-color: #334e68;
+}
+
+#user-nickname {
+    background-color: #486581;
+    color: white;
+    border: none;
+    border-bottom: 1px solid #f0f4f8;
+}
+
+.message-input {
+    background-color: #829ab1;
+    color: #f0f4f8;
+}
+.container-title {
+    text-align: center;
+    padding: 1vh;
+    padding-bottom: 0;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: #102A43;
+    color: white;
+    border-radius: 8px;
+}
